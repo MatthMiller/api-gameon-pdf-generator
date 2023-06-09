@@ -4,6 +4,10 @@ API para gerar PDFs personalizados. Feito em Express com Puppeteer e EJS.
 
 # Como Iniciar o servidor
 
-## npm install
+```
+npm install
+```
 
-## node app.js
+```
+node app.js
+```
