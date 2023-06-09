@@ -282,10 +282,10 @@
         <% data?.times.forEach(function(timeAtual) { %>
           <li class="disputa-item">
             <p class="time-disputa">
-              <%= timeAtual.nome %>
+              <%= timeAtual?.nome %>
             </p>
             <p class="responsavel">
-              <%= timeAtual.responsavel %>
+              <%= timeAtual?.responsavel %>
             </p>
           </li>
           <% }); %>
