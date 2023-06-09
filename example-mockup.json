@@ -1,0 +1,85 @@
+{
+	"campeonatoNome": "Campeonato Rixinhas",
+
+	"times": [
+		{
+			"nome": "Criciúma",
+			"responsavel": "Amaury Jr."
+		},
+		{
+			"nome": "Flamengo",
+			"responsavel": "Jefferson"
+		},
+		{
+			"nome": "Corinthians",
+			"responsavel": "Joaquim Barbosa"
+		},
+		{
+			"nome": "Grêmio",
+			"responsavel": "Zacarias"
+		},
+		{
+			"nome": "Seleção de Marrocos",
+			"responsavel": "Zintz"
+		},
+		{
+			"nome": "Palmeiras",
+			"responsavel": "Michael Mayers"
+		},
+		{
+			"nome": "Barcelona",
+			"responsavel": "Vinicius"
+		}
+	],
+
+	"partidas": [
+		{
+			"times": [
+				{
+					"nome": "Criciúma",
+					"gols": "3"
+				},
+				{
+					"nome": "Flamengo",
+					"gols": "2"
+				}
+			]
+		},
+		{
+			"times": [
+				{
+					"nome": "Corinthians",
+					"gols": "1"
+				},
+				{
+					"nome": "Botafogo",
+					"gols": "1"
+				}
+			]
+		},
+		{
+			"times": [
+				{
+					"nome": "Grêmio",
+					"gols": "3"
+				},
+				{
+					"nome": "Seleção de Marrocos",
+					"gols": "1"
+				}
+			]
+		},
+		{
+			"times": [
+				{
+					"nome": "Palmeiras",
+					"gols": "4"
+				},
+				{
+					"nome": "Barcelona",
+					"gols": "0"
+				}
+			]
+		}
+	]
+}
