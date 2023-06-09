@@ -2,7 +2,7 @@
 
 API para gerar PDFs personalizados. Feito em Express com Puppeteer e EJS.
 
-# Como Iniciar o servidor
+# Como iniciar o servidor
 
 Instalar as dependências
 ```
