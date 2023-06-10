@@ -279,16 +279,18 @@
       </div>
 
       <ul class="disputa-list">
-        <% data?.times.forEach(function(timeAtual) { %>
-          <li class="disputa-item">
-            <p class="time-disputa">
-              <%= timeAtual?.nome %>
-            </p>
-            <p class="responsavel">
-              <%= timeAtual?.responsavel %>
-            </p>
-          </li>
-          <% }); %>
+        <% if (data && data.times && Array.isArray(data.times)) { %>
+          <% data?.times.forEach(function(timeAtual) { %>
+            <li class="disputa-item">
+              <p class="time-disputa">
+                <%= timeAtual?.nome %>
+              </p>
+              <p class="responsavel">
+                <%= timeAtual?.responsavel %>
+              </p>
+            </li>
+            <% }); %>
+              <% } %>
       </ul>
     </div>
   </section>
@@ -296,35 +298,37 @@
   <section class="partidas-section">
     <h1 class="partidas-titulo">Partidas realizadas</h1>
     <ul class="partidas-list">
-      <% data?.partidas.forEach(function(partidaAtual) { %>
-        <li class="partida-item <% if (partidaAtual?.times[0].gols == partidaAtual?.times[1].gols) { %>draw<% } %>">
-          <div class="left">
-            <div class="item-content">
-              <p class="item-time">
-                <%= partidaAtual?.times[0].nome %>
-              </p>
+      <% if (data && data?.partidas.length) { %>
+        <% data?.partidas.forEach(function(partidaAtual) { %>
+          <li class="partida-item <% if (partidaAtual?.times[0].gols == partidaAtual?.times[1].gols) { %>draw<% } %>">
+            <div class="left">
+              <div class="item-content">
+                <p class="item-time">
+                  <%= partidaAtual?.times[0].nome %>
+                </p>
+              </div>
+              <div class="item-number-container">
+                <p class="item-number <% if (partidaAtual?.times[0].gols > partidaAtual?.times[1].gols) { %>win<% } else { %>loose<% } %>">
+                  <%= partidaAtual?.times[0].gols %>
+                </p>
+              </div>
             </div>
-            <div class="item-number-container">
-              <p class="item-number <% if (partidaAtual?.times[0].gols > partidaAtual?.times[1].gols) { %>win<% } else { %>loose<% } %>">
-                <%= partidaAtual?.times[0].gols %>
-              </p>
+            <div class="divisor"></div>
+            <div class="right">
+              <div class="item-number-container">
+                <p class="item-number <% if (partidaAtual?.times[1].gols > partidaAtual?.times[0].gols) { %>win<% } else { %>loose<% } %>">
+                  <%= partidaAtual?.times[1].gols %>
+                </p>
+              </div>
+              <div class="item-content">
+                <p class="item-time">
+                  <%= partidaAtual?.times[1].nome %>
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="divisor"></div>
-          <div class="right">
-            <div class="item-number-container">
-              <p class="item-number <% if (partidaAtual?.times[1].gols > partidaAtual?.times[0].gols) { %>win<% } else { %>loose<% } %>">
-                <%= partidaAtual?.times[1].gols %>
-              </p>
-            </div>
-            <div class="item-content">
-              <p class="item-time">
-                <%= partidaAtual?.times[1].nome %>
-              </p>
-            </div>
-          </div>
-        </li>
-        <% }); %>
+          </li>
+          <% }); %>
+            <% } %>
     </ul>
   </section>
 
