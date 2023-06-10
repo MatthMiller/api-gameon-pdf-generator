@@ -7,7 +7,7 @@
     "uuidv4": "^6.2.13"
   },
   "type": "module",
-  "scripts:" {
+  "scripts": {
     "dev": "node app.js"
   }
 }
