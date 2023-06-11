@@ -298,7 +298,7 @@
   <section class="partidas-section">
     <h1 class="partidas-titulo">Partidas realizadas</h1>
     <ul class="partidas-list">
-      <% if (data && data?.partidas.length) { %>
+      <% if (data && data?.partidas?.length) { %>
         <% data?.partidas.forEach(function(partidaAtual) { %>
           <li class="partida-item <% if (partidaAtual?.times[0].gols == partidaAtual?.times[1].gols) { %>draw<% } %>">
             <div class="left">
